@@ -11,15 +11,15 @@
     "auto-update",
     "updater"
   ],
-  "author": "YOUR_GITHUB_USERNAME",
+  "author": "JaeyoonHan",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/dsh-workbuddy-auto-updater.git"
+    "url": "git+https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/dsh-workbuddy-auto-updater/issues"
+    "url": "https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater/issues"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/dsh-workbuddy-auto-updater#readme",
+  "homepage": "https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater#readme",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
