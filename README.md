@@ -2,6 +2,9 @@
 
 > 一个 [DeepSeek Harness](https://www.deepseek.com/harness)（DSH）本地插件：自动检查 npm 并更新 [`dsh-connect-workbuddy`](https://www.npmjs.com/package/dsh-connect-workbuddy)，全程可在 DSH 插件页面里管理，无需手动下载。
 
+**仓库**：https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater
+**最新版本**：[v0.2.1](https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater/releases/tag/v0.2.1)
+
 ## 功能特性
 
 - 定时从 npm 官方源检查 `dsh-connect-workbuddy` 最新版本
@@ -61,9 +64,15 @@ dsh plugin --profile desktop add dsh-connect-workbuddy@<version>
 
 ## 安装
 
-### 方式一：本地安装（当前推荐）
+### 方式一：从 GitHub 安装（推荐）
 
-克隆或下载本仓库到本地，然后在 DSH 中以本地路径安装（路径按实际位置调整）：
+```bash
+dsh plugin --profile desktop add git+https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater.git
+```
+
+### 方式二：本地安装
+
+克隆或下载本仓库（或从 [Releases](https://github.com/JaeyoonHan/dsh-workbuddy-auto-updater/releases) 下载源码包）到本地，然后在 DSH 中以本地路径安装（路径按实际位置调整）：
 
 ```bash
 dsh plugin --profile desktop add file:../../plugins/dsh-workbuddy-auto-updater
@@ -71,11 +80,8 @@ dsh plugin --profile desktop add file:../../plugins/dsh-workbuddy-auto-updater
 
 安装后**完全退出并重新打开 DSH**，即可在插件页面看到本插件。
 
-### 方式二：从 npm 安装
-
-```bash
-dsh plugin --profile desktop add dsh-workbuddy-auto-updater
-```
+> **尚未发布到 npm。** 本插件目前只能通过 GitHub 或本地路径安装，
+> `dsh plugin add dsh-workbuddy-auto-updater` 会失败。npm 发布后会更新本节。
 
 ## 使用
 
