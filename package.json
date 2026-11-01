@@ -1,6 +1,6 @@
 {
   "name": "dsh-workbuddy-auto-updater",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "自动检查并更新 dsh-connect-workbuddy，可在 DSH 插件页面直接管理",
   "license": "MIT",
   "keywords": [
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "test": "node --test \"test/**/*.test.js\"",
-    "test:e2e": "node test/e2e-hardening.mjs && node test/e2e-cli.mjs && node test/e2e-plugin-boot.mjs",
+    "test:e2e": "node test/e2e-hardening.mjs && node test/e2e-cli.mjs && node test/e2e-plugin-boot.mjs && node test/e2e-log-seed.mjs",
     "check": "node --check lib/index.js && node --check lib/client.js && node --check lib/guard.js && node --check lib/cli.js && npm test"
   },
   "dsh": {
