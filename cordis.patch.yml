@@ -1,0 +1,4 @@
+# WorkBuddy 自动更新插件：宿主端定时检查 npm 并执行更新，客户端提供设置卡片。
+- insert:
+    - id: dsh-workbuddy-auto-updater
+      name: dsh-workbuddy-auto-updater

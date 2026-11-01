@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "WorkBuddy 自动更新",
+    "description": "自动检查 npm 并更新 dsh-connect-workbuddy，可在插件页面管理开关、间隔与日志。"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "WorkBuddy Auto Updater",
+    "description": "Checks npm and updates dsh-connect-workbuddy, with toggle, interval and log managed in the plugins page."
+  }
+}

@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 运行时状态与日志（不入库）
+state.json
+logs/
+*.log
+
+# 备份与临时文件
+*.bak
+*.bak-*
+*.tmp
+*.old
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

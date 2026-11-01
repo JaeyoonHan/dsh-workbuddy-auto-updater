@@ -1,0 +1,54 @@
+{
+  "name": "dsh-workbuddy-auto-updater",
+  "version": "0.1.0",
+  "description": "自动检查并更新 dsh-connect-workbuddy，可在 DSH 插件页面直接管理",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "workbuddy",
+    "auto-update",
+    "updater"
+  ],
+  "author": "YOUR_GITHUB_USERNAME",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/dsh-workbuddy-auto-updater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/dsh-workbuddy-auto-updater/issues"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/dsh-workbuddy-auto-updater#readme",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.1-rc.1 <5.0.0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.1.7-rc.1 <0.3.0-0",
+    "@deepseek-ai/dsh-client-locale": ">=0.1.7-rc.1 <0.3.0-0",
+    "react": "^18.2.0"
+  }
+}
