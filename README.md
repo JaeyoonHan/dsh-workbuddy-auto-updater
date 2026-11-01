@@ -103,16 +103,28 @@ dsh plugin --profile desktop add dsh-workbuddy-auto-updater
 ## 开发
 
 ```bash
-npm test     # 安全原语单测：来源校验、CSRF、版本校验与比较
-npm run check # 语法检查 + 上述单测
+npm test          # 安全原语单测：来源校验、CSRF、版本校验与比较
+npm run test:e2e  # 端到端：重放越权攻击、验证 CLI 无 shell、模拟插件装载
+npm run check     # 语法检查 + 单测
 ```
 
-端到端验证（起真实 HTTP 服务重放越权攻击）：
+### 修改源码后如何让它生效
+
+DSH 的 profile 用 `file:` 依赖 + `nodeLinker: hoisted`
+（见 `~/.dsh/profiles/desktop/pnpm-workspace.yaml`），所以
+`~/.dsh/profiles/desktop/node_modules/` 里是**实体副本**而不是符号链接，
+DSH 运行时加载的正是那份副本。
+
+因此改完 `~/.dsh/plugins/dsh-workbuddy-auto-updater` 里的源码后，
+**必须同步到副本**，否则重启也不会生效：
 
 ```bash
-node test/e2e-hardening.mjs
-node test/e2e-cli.mjs
+# 先完全退出 DSH
+powershell -ExecutionPolicy Bypass -File scripts/sync-to-profile.ps1
 ```
+
+脚本会逐文件比对哈希并报告不一致，避免「以为更新了其实没更新」。
+（`state.json` 与 `logs/` 是运行期数据，不会被同步覆盖。）
 
 ## 常见问题
 
